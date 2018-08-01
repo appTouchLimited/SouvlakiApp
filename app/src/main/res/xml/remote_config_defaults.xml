@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!-- START xml_defaults -->
+<defaultsMap>
+<entry>
+    <key>image_drawer_one</key>
+    <value>https://www.google.com/images/srpr/logo11w.png</value>
+</entry>
+
+<entry>
+    <key>image_bottom_one</key>
+    <value>https://www.google.com/images/srpr/logo11w.png</value>
+</entry>
+
+<entry>
+    <key>text_bottom_one</key>
+    <value>This is from remote config file</value>
+</entry>
+
+
+
+
+
+
+</defaultsMap>
+    <!-- END xml_defaults -->

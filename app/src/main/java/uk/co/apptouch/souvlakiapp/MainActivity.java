@@ -5,6 +5,8 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.ActionBar;
+import android.view.Gravity;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -61,7 +63,24 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        //setting title on main tool bar at top - set to null here
+       // getSupportActionBar().setTitle("");
+        getSupportActionBar().setIcon(getDrawable(R.drawable.souvlaki_main_logo_576_407));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setHomeButtonEnabled(true);
 
+
+
+     //   getSupportActionBar().LayoutParams params = new ActionBar.LayoutParams();
+ /*       ActionBar.LayoutParams params = new ActionBar.LayoutParams;
+        ActionBar.LayoutParams.WRAP_CONTENT;
+        ActionBar.LayoutParams.WRAP_CONTENT, Gravity.CENTER;*/
+
+       // getActionBar().setDisplayHomeAsUpEnabled(false);
+       // ActionBar.LayoutParams params = new ActionBar.LayoutParams;
+
+
+      //  toolbar.setLogo(R.drawable.souvlaki_main_logo_576_407);
 
 
         //loading bottom frag one on initial launch
@@ -108,7 +127,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+      //  getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 

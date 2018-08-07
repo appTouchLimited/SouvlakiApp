@@ -20,14 +20,14 @@ import uk.co.apptouch.souvlakiapp.remote_config.DownloadImageTask;
 
 //import android.support.v4.app.Fragment;
 
-public class bottom_frag_two extends Fragment {
-    public static bottom_frag_two newInstance() {
-        bottom_frag_two fragment = new bottom_frag_two();
+public class drawer_frag_two extends Fragment {
+    public static drawer_frag_two newInstance() {
+        drawer_frag_two fragment = new drawer_frag_two();
         return fragment;
     }
 
     private FirebaseRemoteConfig mFirebaseRemoteConfig;
-    private static final String IMAGE_BOTTOM_TWO= "image_bottom_two";
+    private static final String IMAGE_DRAWER_ONE= "image_drawer_one";
 
     View myView;
 
@@ -48,9 +48,9 @@ public class bottom_frag_two extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        myView = inflater.inflate(R.layout.bottom_frag_two, container, false);
+        myView = inflater.inflate(R.layout.drawer_frag_two, container, false);
 
-      //  fetchWelcome();
+    //    fetchWelcome();
 
         return myView;
     }
@@ -69,14 +69,14 @@ public class bottom_frag_two extends Fragment {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-       /*                     Toast.makeText(getActivity(), "Bottom Two",
+           /*                 Toast.makeText(getActivity(), "Drawer Two",
                                     Toast.LENGTH_SHORT).show();*/
 
                             // After config data is successfully fetched, it must be activated before newly fetched
                             // values are returned.
                             mFirebaseRemoteConfig.activateFetched();
                         } else {
-                     /*       Toast.makeText(getActivity(), "Fetch Failed",
+                /*            Toast.makeText(getActivity(), "Fetch Failed",
                                     Toast.LENGTH_SHORT).show();*/
                         }
                         displayWelcomeMessage();
@@ -86,8 +86,8 @@ public class bottom_frag_two extends Fragment {
 
     private void displayWelcomeMessage() {
 
-   /*     String updateImage = mFirebaseRemoteConfig.getString(IMAGE_BOTTOM_TWO);
-        new DownloadImageTask((ImageView) myView.findViewById(R.id.imageViewDrawerOne))
+        String updateImage = mFirebaseRemoteConfig.getString(IMAGE_DRAWER_ONE);
+/*        new DownloadImageTask((ImageView) myView.findViewById(R.id.imageViewDrawerOne))
                 .execute(updateImage);*/
     }
 }

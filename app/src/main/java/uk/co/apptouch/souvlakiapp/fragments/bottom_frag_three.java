@@ -48,9 +48,9 @@ public class bottom_frag_three extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        myView = inflater.inflate(R.layout.drawer_frag_one, container, false);
+        myView = inflater.inflate(R.layout.bottom_frag_three, container, false);
 
-        fetchWelcome();
+     //   fetchWelcome();
 
         return myView;
     }
@@ -69,15 +69,15 @@ public class bottom_frag_three extends Fragment {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(getActivity(), "Fetch Succeeded",
-                                    Toast.LENGTH_SHORT).show();
+                       /*     Toast.makeText(getActivity(), "Bottom Three",
+                                    Toast.LENGTH_SHORT).show();*/
 
                             // After config data is successfully fetched, it must be activated before newly fetched
                             // values are returned.
                             mFirebaseRemoteConfig.activateFetched();
                         } else {
-                            Toast.makeText(getActivity(), "Fetch Failed",
-                                    Toast.LENGTH_SHORT).show();
+           /*                 Toast.makeText(getActivity(), "Fetch Failed",
+                                    Toast.LENGTH_SHORT).show();*/
                         }
                         displayWelcomeMessage();
                     }
@@ -86,8 +86,8 @@ public class bottom_frag_three extends Fragment {
 
     private void displayWelcomeMessage() {
 
-        String updateImage = mFirebaseRemoteConfig.getString(IMAGE_DRAWER_ONE);
+ /*       String updateImage = mFirebaseRemoteConfig.getString(IMAGE_DRAWER_ONE);
         new DownloadImageTask((ImageView) myView.findViewById(R.id.imageViewDrawerOne))
-                .execute(updateImage);
+                .execute(updateImage);*/
     }
 }

@@ -53,10 +53,10 @@ public class bottom_frag_one extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         myView = inflater.inflate(R.layout.bottom_frag_one, container, false);
-        textViewOne = myView.findViewById(R.id.txtViewBFO_1);
-        imageViewOne = myView.findViewById(R.id.imageViewBFO_1);
+   //     textViewOne = myView.findViewById(R.id.txtViewBFO_1);
+  //      imageViewOne = myView.findViewById(R.id.imageViewBFO_1);
 
-        fetchWelcome();
+       // fetchWelcome();
 
         return myView;
     }
@@ -76,15 +76,15 @@ public class bottom_frag_one extends Fragment {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(getActivity(), "Fetch Succeeded",
-                                    Toast.LENGTH_SHORT).show();
+                        /*    Toast.makeText(getActivity(), "Bottom One",
+                                    Toast.LENGTH_SHORT).show();*/
 
                             // After config data is successfully fetched, it must be activated before newly fetched
                             // values are returned.
                             mFirebaseRemoteConfig.activateFetched();
                         } else {
-                            Toast.makeText(getActivity(), "Fetch Failed",
-                                    Toast.LENGTH_SHORT).show();
+                        /*    Toast.makeText(getActivity(), "Fetch Failed",
+                                    Toast.LENGTH_SHORT).show();*/
                         }
                         displayWelcomeMessage();
                     }
@@ -93,12 +93,12 @@ public class bottom_frag_one extends Fragment {
 
     private void displayWelcomeMessage() {
 
-        String textViewContent1 = mFirebaseRemoteConfig.getString(TEXT_BOTTOM_ONE);
+/*        String textViewContent1 = mFirebaseRemoteConfig.getString(TEXT_BOTTOM_ONE);
         textViewOne.setText(textViewContent1);
 
         String updateImage = mFirebaseRemoteConfig.getString(IMAGE_BOTTOM_ONE);
         new DownloadImageTask(imageViewOne)
-                .execute(updateImage);
+                .execute(updateImage);*/
 
     }
 }

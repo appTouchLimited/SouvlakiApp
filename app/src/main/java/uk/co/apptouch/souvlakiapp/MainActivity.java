@@ -25,7 +25,11 @@ import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 
 import uk.co.apptouch.souvlakiapp.fragments.bottom_frag_one;
+import uk.co.apptouch.souvlakiapp.fragments.bottom_frag_three;
+import uk.co.apptouch.souvlakiapp.fragments.bottom_frag_two;
 import uk.co.apptouch.souvlakiapp.fragments.drawer_frag_one;
+import uk.co.apptouch.souvlakiapp.fragments.drawer_frag_three;
+import uk.co.apptouch.souvlakiapp.fragments.drawer_frag_two;
 import uk.co.apptouch.souvlakiapp.remote_config.DownloadImageTask;
 
 public class MainActivity extends AppCompatActivity
@@ -42,15 +46,17 @@ public class MainActivity extends AppCompatActivity
             android.app.FragmentManager fragmentManager = getFragmentManager();
             switch (item.getItemId()) {
 
-                case R.id.navigation_home:
+                case R.id.navigation_findus:
                     fragmentManager.beginTransaction().replace(R.id.content_frame, new bottom_frag_one()).commit();
-                    break;
+                    return true;
 
-                case R.id.navigation_dashboard:
-                    break;
+                case R.id.navigation_offers:
+                    fragmentManager.beginTransaction().replace(R.id.content_frame, new bottom_frag_two()).commit();
+                    return true;
 
-                case R.id.navigation_notifications:
-                    break;
+                case R.id.navigation_preorder:
+                    fragmentManager.beginTransaction().replace(R.id.content_frame, new bottom_frag_three()).commit();
+                    return true;
             }
             return false;
         }
@@ -156,18 +162,14 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
         android.app.FragmentManager fragmentManager = getFragmentManager();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_followus) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new drawer_frag_one()).commit();
 
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_contactus) {
+            fragmentManager.beginTransaction().replace(R.id.content_frame, new drawer_frag_two()).commit();
 
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_shareapp) {
+            fragmentManager.beginTransaction().replace(R.id.content_frame, new drawer_frag_three()).commit();
 
         }
 

@@ -11,6 +11,19 @@
     <value>https://www.google.com/images/srpr/logo11w.png</value>
 </entry>
 
+    <entry>
+        <key>image_bottom_two</key>
+        <value>http://pngimg.com/uploads/number2/Number%202%20PNG%20images%20free%20download_PNG14954.png</value>
+    </entry>
+
+    <entry>
+        <key>image_bottom_three</key>
+        <value>https://www.google.com/images/srpr/logo11w.png</value>
+    </entry>
+
+
+
+
 <entry>
     <key>text_bottom_one</key>
     <value>This is from remote config file</value>
